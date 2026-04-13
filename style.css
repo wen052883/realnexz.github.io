@@ -469,11 +469,11 @@ body {
   .logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* LOGO 跟 ☰ 間距 */
   }
   .menu-toggle {
     display: block;
     color:white;
+    
   }
 
   .menu {
