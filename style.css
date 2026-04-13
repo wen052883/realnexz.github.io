@@ -394,21 +394,16 @@ body {
   height: 50px;
 }
 
-/* menu 推到右邊 */
-.menu {
-  margin-left: auto;
-  display: flex;
-}
   /* 漢堡按鈕顯示 */
   .menu-toggle {
     display: block;
   }
 
   /* ===== 側邊滑出選單 ===== */
-  .menu {
+   .menu {
     position: fixed;
     top: 0;
-    left: -100%; /* 隱藏 */
+    left: -100%;
     width: 70%;
     height: 100%;
     background: #000;
@@ -417,10 +412,12 @@ body {
     justify-content: center;
     transition: 0.3s;
     z-index: 1000;
+    margin-left: 0; /* ❗移除衝突 */
+    display: flex;
   }
 
   .menu.active {
-    left: 0; /* 顯示 */
+    left: 0;
   }
 
   .menu li {
