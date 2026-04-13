@@ -371,7 +371,6 @@ body {
     padding: 10px;
   }
 
-  /* 子選單不要用 hover（手機沒滑鼠） */
   .submenu {
     position: static;
   }
@@ -379,7 +378,7 @@ body {
   /* ===== 主版面（左右改上下） ===== */
   .main-layout {
     flex-direction: column;
-    padding: 0 20px;  /* 原本200太大 */
+    padding: 0 20px; 
   }
 
   .left, .right {
@@ -407,6 +406,7 @@ body {
   .member-layout {
     flex-direction: column;
     padding: 20px;
+    align-items:center;
   }
 
   .mem-left {
@@ -449,7 +449,7 @@ body {
 
   /* ===== 文字 ===== */
   h1 {
-    font-size: 20px;
+    font-size: 28px;
   }
 
 }
@@ -460,54 +460,8 @@ body {
   color: white;
   cursor: pointer;
 }
-
-/* 手機版 */
-@media (max-width: 768px) {
-  main {
-    margin-top: 70px;
-  }
-  .logo {
+.logo {
   display: flex;
   align-items: center;
-  gap:300px;
-  }
-  .menu-toggle {
-    display: block;
-    color:white;
-  }
-
-  .menu {
-    position: fixed;
-    top: 0;
-    left: -100%;   /* 預設藏起來 */
-    width: 70%;
-    height: 100%;
-    background: #000;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    z-index: 1000;
-    margin-left: auto;
-  }
-
-  .menu.active {
-    left: 0;   /* 滑出來 */
-  }
-
-  .menu li {
-    width: 100%;
-  }
-
-  .menu a {
-    padding: 15px;
-    font-size: 18px;
-  }
-
-  /* navbar 高度縮小 */
-  .navbar {
-    height: 60px;
-    justify-content: space-between;
-  }
-
+  gap: 250px; /
 }
