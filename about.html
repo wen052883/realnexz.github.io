@@ -13,13 +13,12 @@
     <!-- Navigation -->
     <nav class="navbar">
   <!-- 左邊 LOGO -->
-    <div class="logo">
+   <div class="logo">
+       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
        <a href="index.html">
         <img src="images/logo.jpg" alt="LOGO">
-       </a>    
+       </a>
     </div>
-        
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         
     <ul class="menu">
         <li><a href="index.html">HOME</a></li>
@@ -39,6 +38,11 @@
         <li><a href="discography.html">DISCOGRAPHY</a></li>
     </ul>
     </nav>
+    <script>
+    function toggleMenu() {
+      document.querySelector(".menu").classList.toggle("active");
+    }
+    </script>
     <script>
     function toggleMenu() {
       document.querySelector(".menu").classList.toggle("active");
