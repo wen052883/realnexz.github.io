@@ -452,6 +452,7 @@ body {
 
   .text-left, .text-right {
     padding: 10px 0;
+     text-align: left;
   }
 
   /* ===== 成員圖片 ===== */
