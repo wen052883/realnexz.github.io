@@ -348,18 +348,53 @@ body {
 }
 
 /* ===== 手機版 ===== */
+/* ===== LOGO 區 ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== 漢堡按鈕（預設桌機隱藏） ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== 手機版 ===== */
 @media (max-width: 768px) {
 
   /* ===== Navbar ===== */
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+    flex-direction: row; /* 不要 column（避免跑版） */
+    height: 60px;
+    padding: 0 10px;
   }
 
+  /* 漢堡按鈕顯示 */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* ===== 側邊滑出選單 ===== */
   .menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* 隱藏 */
+    width: 70%;
+    height: 100%;
+    background: #000;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    left: 0; /* 顯示 */
   }
 
   .menu li {
@@ -368,17 +403,19 @@ body {
   }
 
   .menu a {
-    padding: 10px;
+    padding: 15px;
+    font-size: 18px;
   }
 
+  /* 子選單（手機不要 absolute） */
   .submenu {
     position: static;
   }
 
-  /* ===== 主版面（左右改上下） ===== */
+  /* ===== 主版面（左右 → 上下） ===== */
   .main-layout {
     flex-direction: column;
-    padding: 0 20px; 
+    padding: 0 20px;
   }
 
   .left, .right {
@@ -406,11 +443,11 @@ body {
   .member-layout {
     flex-direction: column;
     padding: 20px;
-    align-items:center;
+    align-items: center;
   }
 
   .mem-left {
-    padding-left: 0; /* 原本300會炸 */
+    padding-left: 0;
     text-align: center;
   }
 
@@ -449,19 +486,11 @@ body {
 
   /* ===== 文字 ===== */
   h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
-}
-/* ===== 手機漢堡選單 ===== */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
+  /* ===== 修正 navbar 蓋住內容 ===== */
+  main {
+    margin-top: 70px;
+  }
 }
