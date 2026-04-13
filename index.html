@@ -98,7 +98,65 @@ slides.addEventListener("transitionend", () => {
 // 按鈕
 document.querySelector(".next").onclick = nextSlide;
 document.querySelector(".prev").onclick = prevSlide;
+//
+function playVideo(id, videoId){
+  const iframe = document.getElementById(id);
+  iframe.style.display = "block";
+}
+
 </script>
+
+<h1 class="home-tit">NEXT, WATCH...</h1>
+<div class="video-row">
+  <!-- 影片1 -->
+  <div class="video-box">
+    <img src="https://img.youtube.com/vi/UT-9Xv1tqxE/maxresdefault.jpg"
+         onclick="playVideo('v1','UT-9Xv1tqxE')">
+
+    <iframe id="v1"
+      src="https://www.youtube.com/embed/UT-9Xv1tqxE"
+      style="display:none;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <p class="video-title">NEXZ Archive 2025 | NEXZ Choreography</p>
+  </div>
+
+  <!-- 影片2 -->
+  <div class="video-box">
+    <img src="https://img.youtube.com/vi/d4tHKtG9xFo/maxresdefault.jpg"
+         onclick="playVideo('v2','d4tHKtG9xFo')">
+
+    <iframe id="v2"
+      src="https://www.youtube.com/embed/d4tHKtG9xFo"
+      style="display:none;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <p class="video-title">NEXZ Beat-Boxer M/V</p>
+  </div>
+
+  <!-- 影片3 -->
+  <div class="video-box">
+    <img src="https://img.youtube.com/vi/yCi2riUDpLE/maxresdefault.jpg"
+         onclick="playVideo('v3','yCi2riUDpLE')">
+
+    <iframe id="v3"
+      src="https://www.youtube.com/embed/yCi2riUDpLE"
+      style="display:none;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <p class="video-title">NEXcation in JEJU | Edited by TOMOYA</p>
+  </div>
+
+</div>
+    
+  </div>
+  </div>
   </main>
 
   <!-- Footer -->
