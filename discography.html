@@ -39,8 +39,80 @@
     </nav>
     <main>
         <h1 style="text-align: center;">DISCOGRAPHY</h1>
+        <div class="album-container">
+
+          <!-- 上排 -->
+          <div class="row">
+            <div class="album">
+              <img src="images/b-b.jpg" onclick="openModal('Beat-Boxer','Release Date:2025-10-27\n\n☆TRACK LIST☆\n\n01.Legacy\n02.Beat-Boxer\n03.I\'m Him\n04.Co-Star\n05.Next To Me')">
+              <p>Beat-Boxer</p>
+            </div>
+
+            <div class="album">
+              <img src="images/onebite.jpg" onclick="openModal('One Bite','Release Date:2025-07-16\n\n☆TRACK LIST☆\n\n01.One Bite\n02.BURNING BLACK\n03.Make it Better\n04.One Day')">
+              <p>One Bite</p>
+            </div>
+
+            <div class="album">
+              <img src="images/o-riy.jpg" onclick="openModal('O-RLY?','Release Date:2025-04-28\n\n☆TRACK LIST☆\n\n01.O-RLY?\n02.Simmer\n03.Want More? One More!\n04.Run With Me\n05.Slo-mo')">
+              <p>O-RLY?</p>
+            </div>
+          </div>
+
+          <!-- 下排 -->
+          <div class="row">
+            <div class="album">
+              <img src="images/n.jpg"onclick="openModal('NALLINA','Release Date:2024-11-18\n\n☆TRACK LIST☆\n\n01.HARD\n02.NALLINA\n03.Next Zeneration\n04.Eye to Eye\n05.Keep on Moving (Korean Ver.)')">
+              <p>NALLINA</p>
+            </div>
+
+            <div class="album">
+              <img src="images/kom.jpg" onclick="openModal('Keep on Moving','Release Date:2024-09-23\n\n☆TRACK LIST☆\n\n01.Keep on Moving (Korean Ver.)')">
+              <p>Keep on Moving (Korean Ver.)</p>
+            </div>
+
+            <div class="album">
+              <img src="images/ridetv.jpg" onclick="openModal('Ride the Vibe','Release Date:2024-05-20\n\n☆TRACK LIST☆\n\n01.Ride the Vibe\n02.Starlight')">
+              <p>Ride the Vibe</p>
+            </div>
+          </div>
+
+              <!-- 彈出視窗 -->
+            <div id="albumModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+              </div>
+            </div>
+        </div>
+      <script>
+      function openModal(title, desc) {
+        document.getElementById("albumModal").style.display = "block";
+        document.getElementById("modalTitle").innerHTML = title;
+        document.getElementById("modalDesc").innerHTML = desc;
+      }
+
+      // 關閉
+      document.querySelector(".close").onclick = function() {
+        document.getElementById("albumModal").style.display = "none";
+      }
+
+      // 點背景也關閉
+      window.onclick = function(e) {
+        const modal = document.getElementById("albumModal");
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
     </main>
 <!-- Footer -->
+  <footer>
+    <p>© 2026 NEXZ&NEX2Y Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
   <footer>
     <p>© 2026 NEXZ&NEX2Y Website. All rights reserved.</p>
   </footer>
