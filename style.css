@@ -350,6 +350,89 @@ body {
 /* ===== 手機版 ===== */
 @media (max-width: 768px) {
 
+  /* ===== Navbar ===== */
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu a {
+    padding: 10px;
+  }
+
+  /* 子選單不要用 hover（手機沒滑鼠） */
+  .submenu {
+    position: static;
+  }
+
+  /* ===== 主版面（左右改上下） ===== */
+  .main-layout {
+    flex-direction: column;
+    padding: 0 20px;  /* 原本200太大 */
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .text-left, .text-right {
+    padding: 10px 0;
+  }
+
+  /* ===== 成員圖片 ===== */
+  .m-image {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .m-image img {
+    width: 80%;
+  }
+
+  /* ===== 個人頁 ===== */
+  .member-layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .mem-left {
+    padding-left: 0; /* 原本300會炸 */
+    text-align: center;
+  }
+
+  .mem-image img {
+    width: 80%;
+  }
+
+  /* ===== 專輯 ===== */
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .album {
+    width: 100%;
+  }
+
+  .album img {
+    height: auto;
+  }
+
+  /* ===== 影片 ===== */
   .video-row {
     flex-direction: column;
     align-items: center;
@@ -359,15 +442,12 @@ body {
     width: 90%;
   }
 
-  nav {
-    flex-direction: column;
+  /* ===== Banner ===== */
+  .banner {
+    max-width: 100%;
   }
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-
+  /* ===== 文字 ===== */
   h1 {
     font-size: 20px;
   }
