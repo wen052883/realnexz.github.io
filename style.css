@@ -466,6 +466,11 @@ body {
   main {
     margin-top: 70px;
   }
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* LOGO 跟 ☰ 間距 */
+  }
   .menu-toggle {
     display: block;
     color:white;
@@ -483,6 +488,7 @@ body {
     justify-content: center;
     transition: 0.3s;
     z-index: 1000;
+    margin-left: auto;
   }
 
   .menu.active {
