@@ -469,11 +469,11 @@ body {
   .logo {
   display: flex;
   align-items: center;
+  gap:300px;
   }
   .menu-toggle {
     display: block;
     color:white;
-    align-items: left;
   }
 
   .menu {
